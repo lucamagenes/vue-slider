@@ -1,7 +1,7 @@
 var root = new Vue({
     el: '#root',
     data: {
-        activeClass: 'active',
+        activeClass: true,
         counter: 0,
         slides: [
             {
@@ -34,13 +34,13 @@ var root = new Vue({
     methods: {
         slideUp() {
             --this.counter;
-            if (this.counter == -1) {
-                this.counter = 4;
-            }
+            if (this.counter < 0) {
+                this.counter = this.slides.length - 1;
+            };
         },
         slideDown() {
             ++this.counter;
-            if (this.counter == 5) {
+            if (this.counter > this.slides.length - 1) {
                 this.counter = 0;
             }
         },
