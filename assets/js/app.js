@@ -32,6 +32,14 @@ var root = new Vue({
         ]
     },
     methods: {
+
+        autoPlay: function () {
+            setInterval(function () {
+
+
+            }, 3000);
+        },
+
         slideUp() {
             --this.counter;
             if (this.counter < 0) {
@@ -43,6 +51,11 @@ var root = new Vue({
             if (this.counter > this.slides.length - 1) {
                 this.counter = 0;
             }
-        },
+            return this.slideDown()
+        }
+    },
+    mounted() {
+        this.autoPlay()
     }
+
 })
