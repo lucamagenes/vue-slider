@@ -36,7 +36,8 @@
 
                 <div class="thumbs">
 
-                    <div v-for="slide in slides" class="thumb">
+                    <div v-for="slide in slides" class="thumb"
+                        :class="activeClass">
                         <img :src="slide.item" alt="">
                     </div>
 
