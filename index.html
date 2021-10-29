@@ -15,12 +15,37 @@
 
         <div id="root">
 
+            <div class="container">
+
+                <div class="preview">
+
+                    <img :src="slides[counter].item" alt="">
+                    <h2>{{slides[counter].title}} </h2>
+                    <p>{{slides[counter].text}} </p>
+
+                </div>
+
+                <div class="buttons">
+                    <div @click="slideUp" class="btn_up">
+                        <i class="fas fa-chevron-up fa-lg fa-fw"></i>
+                    </div>
+                    <div @click="slideDown" class="btn_down">
+                        <i class="fas fa-chevron-down fa-lg fa-fw"></i>
+                    </div>
+                </div>
+
+                <div class="thumbs">
+
+                    <div v-for="slide in slides" class="thumb">
+                        <img :src="slide.item" alt="">
+                    </div>
+
+                </div>
 
 
 
 
-
-
+            </div>
 
 
         </div>

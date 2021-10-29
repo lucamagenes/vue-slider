@@ -1,6 +1,7 @@
 var root = new Vue({
     el: '#root',
     data: {
+        counter: 0,
         slides: [
             {
                 item: 'img/01.jpg',
@@ -28,5 +29,13 @@ var root = new Vue({
                 text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
             },
         ]
+    },
+    methods: {
+        slideUp: function () {
+
+        }
+        slideDown: function () {
+
+        }
     }
 })
