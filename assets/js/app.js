@@ -33,9 +33,9 @@ var root = new Vue({
     },
     methods: {
 
-        autoPlay: function () {
+        autoPlay() {
             setInterval(function () {
-
+                root.slideDown()
 
             }, 3000);
         },
@@ -46,16 +46,17 @@ var root = new Vue({
                 this.counter = this.slides.length - 1;
             };
         },
+
         slideDown() {
             ++this.counter;
             if (this.counter > this.slides.length - 1) {
                 this.counter = 0;
             }
-            return this.slideDown()
-        }
+        },
+
     },
+
     mounted() {
         this.autoPlay()
     }
-
 })
